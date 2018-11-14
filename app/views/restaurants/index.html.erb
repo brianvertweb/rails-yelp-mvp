@@ -1,0 +1,13 @@
+<h1>Yelp, but not really...</h1>
+<% @restaurants.each do |restaurant| %>
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+  <p>Address: <%= restaurant.address %></p>
+  <p>Phone #: <%= restaurant.phone %></p>
+  <p>Type of Cuisine: <%= restaurant.category %></p>
+<% end %>
+
+<%= link_to "Add A Restaurant", new_restaurant_path(@restuarants) %>
+
+
+
+
